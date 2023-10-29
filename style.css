@@ -25,6 +25,7 @@ div {
 .sidebar {
     grid-area: sidebar;
     display: grid;
+    gap: 1rem;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
 }
@@ -32,15 +33,18 @@ div {
 .header {
     grid-area: header;
     display: grid;
+    gap: 1rem;
 }
 
 .header>.first-part {
     display: grid;
+    gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
 }
 
 .header>.second-part {
     display: grid;
+    gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
 }
 
@@ -52,7 +56,32 @@ button {
 }
 
 .main {
+    background-color: lightgray;
     grid-area: main;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "project ad"
+        "project trend";
+}
+
+.project {
+    grid-area: project;
+}
+
+.cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ad {
+    grid-area: ad;
+}
+
+.trend {
+    grid-area: trend;
 }
 
 li {
