@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+div {
+    border: 1px solid black;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 6fr;
@@ -27,6 +31,24 @@
 
 .header {
     grid-area: header;
+    display: grid;
+}
+
+.header>.first-part {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.header>.second-part {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+button {
+    height: 25px;
+    width: 75px;
+    border: 0;
+    border-radius: 20px;
 }
 
 .main {
