@@ -8,10 +8,11 @@
 
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
 }
 
 div {
-    /* border: 1px solid black; */
+    border: 1px black;
 }
 
 .icons {
@@ -43,11 +44,12 @@ div {
     grid-template-columns: 30px 120px;
     /* grid-template-rows: 40px 180px 80px; */
     /* grid-template-rows: .2fr 1fr .4fr; */
-    grid-template-rows: .5fr;
-    grid-auto-rows: 2fr;
+    grid-template-rows: 30px 20px 180px 20px 100px;
     grid-template-areas:
         "title-icon title"
+        ". ."
         "sections-icons sections"
+        ". ."
         "settings-icons settings";
     gap: 0.5rem;
 }
@@ -63,7 +65,7 @@ div {
     padding-top: 5px;
     grid-area: title;
     display: grid;
-    font-size: large;
+    font-size: 1.4rem;
     grid-auto-rows: 30px;
 }
 
@@ -98,7 +100,7 @@ div {
 }
 
 
-.header-first-part {
+.header>.first-part {
     padding-left: 2rem;
     /* grid-area: first-part; */
     display: grid;
@@ -125,7 +127,7 @@ div {
     width: 4rem;
 }
 
-.header-second-part {
+.header>.second-part {
     padding-left: 2rem;
     /* grid-area: second-part; */
     display: grid;
@@ -143,7 +145,7 @@ div {
     font-size: 1.3rem;
 }
 
-.header-second-part button {
+.second-part button {
     height: 25px;
     width: 75px;
     border: 0;
@@ -153,30 +155,100 @@ div {
 .main {
     background-color: #E2E8F0;
     grid-area: main;
-    gap: 1rem;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "project ad"
         "project trend";
 }
 
 .project {
+    padding: 1rem 0rem 1rem 1rem;
     grid-area: project;
+}
+
+.main-subtitle {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .cards {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); */
+    grid-auto-rows: 250px;
+
+}
+
+.card-accent {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
+    color: #636363;
+}
+
+.project h3 {
+    color: black;
+}
+
+.card {
+    padding: 1rem;
+    display: grid;
+    border-left: 10px solid #F0B429;
+}
+
+.buttons {
+    justify-self: end;
+}
+
+.buttons>button {
+    width: 20px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background-color: white;
+    border: 0;
+
 }
 
 .ad {
+    padding: 1rem;
     grid-area: ad;
 }
 
+.ad-card {
+    padding: 1.5rem;
+    display: grid;
+    gap: .6rem;
+    font-size: .8rem;
+}
+
+.ad-card h4 {
+    margin-bottom: .2rem;
+    color: black;
+}
+
+.line {
+    border: 1px solid #E2E8F0;
+}
+
 .trend {
+    padding: 1rem;
     grid-area: trend;
+}
+
+.trend-card {
+    padding: 1rem;
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: 2.5rem 11rem;
+}
+
+.accounts-names {
+    font-weight: 800px;
+    color: black;
 }
 
 li {
