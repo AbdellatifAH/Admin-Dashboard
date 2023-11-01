@@ -22,7 +22,7 @@ div {
 .container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 5fr;
     /* grid-auto-rows: 150px; */
     grid-template-rows: .1fr 1fr;
     grid-template-areas:
@@ -41,7 +41,7 @@ div {
     grid-area: sidebar;
     display: grid;
     gap: 1rem;
-    grid-template-columns: 30px 120px;
+    grid-template-columns: 2.5rem 4rem;
     /* grid-template-rows: 40px 180px 80px; */
     /* grid-template-rows: .2fr 1fr .4fr; */
     grid-template-rows: 30px 20px 180px 20px 100px;
@@ -185,6 +185,7 @@ div {
 
 .card-accent {
     background-color: white;
+    /* font-size: 1.2rem; */
     border-radius: 10px;
     box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
     color: #636363;
@@ -214,11 +215,12 @@ div {
 }
 
 .ad {
-    padding: 1rem;
+    padding: 1rem 3rem 1rem 2rem;
     grid-area: ad;
 }
 
 .ad-card {
+    /* height: 80%; */
     padding: 1.5rem;
     display: grid;
     gap: .6rem;
@@ -232,22 +234,28 @@ div {
 
 .line {
     border: 1px solid #E2E8F0;
+    height: 0px;
 }
 
 .trend {
-    padding: 1rem;
+    padding: 1rem 3rem 1rem 2rem;
     grid-area: trend;
 }
 
 .trend-card {
+    /* height: 70%; */
     padding: 1rem;
     display: grid;
-    gap: .5rem;
-    grid-template-columns: 2.5rem 11rem;
+    gap: 1.5rem 1rem;
+    grid-template-columns: 2.5rem 9rem;
+    justify-content: center;
+    align-content: center;
+
 }
 
 .accounts-names {
     font-weight: 800px;
+    font-size: 1.2rem;
     color: black;
 }
 
